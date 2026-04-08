@@ -18,6 +18,7 @@ from openenv.core.env_server.types import State
 
 # try:
 from code_review_env.models import CodeReviewAction, CodeReviewObservation
+from code_review_env.server.code_review_env_environment import CodeReviewEnvironment
 # except ImportError:
 #     from models import CodeReviewAction, CodeReviewObservation
 
