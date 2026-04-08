@@ -99,7 +99,7 @@ class CodeReviewEnvironment(Environment):
     def __init__(self, task_id: str = "easy"):
         self.task_id = task_id
         self.task_id = TASKS.get(task_id, TASKS["easy"])
-        self.state = State(episode_id=str(uuid4()), step_count=0)
+        self._state = State(episode_id=str(uuid4()), step_count=0)
         self.max_steps = 5
 
     def reset(self) -> CodeReviewObservation:
