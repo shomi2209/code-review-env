@@ -35,12 +35,15 @@ except Exception as e:  # pragma: no cover
         "openenv is required for the web interface. Install dependencies with '\n    uv sync\n'"
     ) from e
 
-try:
-    from ..models import CodeReviewAction, CodeReviewObservation
-    from .code_review_env_environment import CodeReviewEnvironment
-except ModuleNotFoundError:
-    from models import CodeReviewAction, CodeReviewObservation
-    from server.code_review_env_environment import CodeReviewEnvironment
+# try:
+#     from ..models import CodeReviewAction, CodeReviewObservation
+#     from .code_review_env_environment import CodeReviewEnvironment
+# except ModuleNotFoundError:
+#     from models import CodeReviewAction, CodeReviewObservation
+#     from server.code_review_env_environment import CodeReviewEnvironment
+
+from models import CodeReviewAction, CodeReviewObservation
+from server.code_review_env_environment import CodeReviewEnvironment
 
 
 # Create the app with web interface and README integration
