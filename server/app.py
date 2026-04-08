@@ -28,12 +28,12 @@ Usage:
     python -m server.app
 """
 
-try:
-    from openenv.core.env_server.http_server import create_app
-except Exception as e:  # pragma: no cover
-    raise ImportError(
-        "openenv is required for the web interface. Install dependencies with '\n    uv sync\n'"
-    ) from e
+# try:
+from openenv.core.env_server.http_server import create_app
+# except Exception as e:  # pragma: no cover
+#     raise ImportError(
+#         "openenv is required for the web interface. Install dependencies with '\n    uv sync\n'"
+#     ) from e
 
 # try:
 #     from ..models import CodeReviewAction, CodeReviewObservation
@@ -74,13 +74,11 @@ def main(host: str = "0.0.0.0", port: int = 8000):
         uvicorn code_review_env.server.app:app --workers 4
     """
     import uvicorn
-
     uvicorn.run(app, host=host, port=port)
 
 
 if __name__ == "__main__":
     import argparse
-
     parser = argparse.ArgumentParser()
     parser.add_argument("--port", type=int, default=8000)
     args = parser.parse_args()
