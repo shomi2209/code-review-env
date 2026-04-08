@@ -1,8 +1,8 @@
 ---
 title: Code Review Env Environment Server
 emoji: 🖥️
-colorFrom: red
-colorTo: pink
+colorFrom: blue
+colorTo: purple
 sdk: docker
 pinned: false
 app_port: 8000
@@ -13,7 +13,12 @@ tags:
 
 # Code Review Env Environment
 
-A simple test environment that echoes back messages. Perfect for testing the env APIs as well as demonstrating environment usage patterns.
+OpenEnv environment for AI agent code review training.
+
+## Tasks
+- **easy**: 2 bugs, single C file
+- **medium** 5 bugs, multi-file
+- **hard**: 5 concurrency bugs
 
 ## Quick Start
 
@@ -254,21 +259,4 @@ code_review_env/
     └── Dockerfile         # Container image definition
 ```
 
----
-title: Code Review Env
-emoji: 
-colorFrom: blue
-colorTo: purple
-sdk: docker
-app_port : 8000
-pinned: false
----
 
-# Code Review Environment
-
-OpenEnv environment for AI agent code review training.
-
-##Tasks
-- **easy**: 2 bugs, single C file
--**medium** 5 bugs, multi-file
--**hard**: 5 concurrency bugs
