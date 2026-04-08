@@ -28,20 +28,7 @@ Usage:
     python -m server.app
 """
 
-# try:
 from openenv.core.env_server.http_server import create_app
-# except Exception as e:  # pragma: no cover
-#     raise ImportError(
-#         "openenv is required for the web interface. Install dependencies with '\n    uv sync\n'"
-#     ) from e
-
-# try:
-#     from ..models import CodeReviewAction, CodeReviewObservation
-#     from .code_review_env_environment import CodeReviewEnvironment
-# except ModuleNotFoundError:
-#     from models import CodeReviewAction, CodeReviewObservation
-#     from server.code_review_env_environment import CodeReviewEnvironment
-
 from models import CodeReviewAction, CodeReviewObservation
 from .code_review_env_environment import CodeReviewEnvironment
 
