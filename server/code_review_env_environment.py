@@ -16,10 +16,10 @@ from typing import List
 from openenv.core.env_server.interfaces import Environment
 from openenv.core.env_server.types import State
 
-try:
-    from ..models import CodeReviewAction, CodeReviewObservation
-except ImportError:
-    from models import CodeReviewAction, CodeReviewObservation
+# try:
+    from code_review_env.models import CodeReviewAction, CodeReviewObservation
+# except ImportError:
+#     from models import CodeReviewAction, CodeReviewObservation
 
 EASY_CODE = '''void copy(cahr* dst, char* src) {
     strcpy(dst, src);
