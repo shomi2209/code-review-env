@@ -43,7 +43,7 @@ except Exception as e:  # pragma: no cover
 #     from server.code_review_env_environment import CodeReviewEnvironment
 
 from models import CodeReviewAction, CodeReviewObservation
-from server.code_review_env_environment import CodeReviewEnvironment
+from code_review_env_environment import CodeReviewEnvironment
 
 
 # Create the app with web interface and README integration
