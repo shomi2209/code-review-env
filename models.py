@@ -11,7 +11,7 @@ The code_review_env environment is a simple test environment that echoes back me
 """
 
 from openenv.core.env_server.types import Action, Observation
-from pydantic import Field
+from pydantic import BaseModel, Field
 from typing import List
 
 class ReviewComment(BaseModel):
