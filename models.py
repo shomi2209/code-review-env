@@ -14,7 +14,7 @@ from openenv.core.env_server.types import Action, Observation
 from pydantic import Field
 from typing import List
 
-class ReviewComment(Action):
+class ReviewComment(BaseModel):
     line: int = Field(..., description="Line number of the issue")
     severity: str = Field(..., description="HIGH,MEDIUM or LOW")
     issue: str = Field(..., description="Description of the bug")
