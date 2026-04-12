@@ -39,7 +39,7 @@ app = create_app(
     CodeReviewAction,
     CodeReviewObservation,
     env_name="code_review_env",
-    max_concurrent_envs=1,  # increase this number to allow more concurrent WebSocket sessions
+    max_concurrent_envs=4,  # increase this number to allow more concurrent WebSocket sessions
 )
 
 
@@ -65,8 +65,4 @@ def main():
 
 
 if __name__ == "__main__":
-    # import argparse
-    # parser = argparse.ArgumentParser()
-    # parser.add_argument("--port", type=int, default=8000)
-    # args = parser.parse_args()
     main()
