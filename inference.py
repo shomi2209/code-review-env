@@ -9,7 +9,8 @@ from openai import OpenAI
 # ── Mandatory env vars ────────────────────────────────────────────────────────
 API_BASE_URL = os.getenv("API_BASE_URL", "https://api.openai.com/v1")
 MODEL_NAME   = os.getenv("MODEL_NAME", "gpt-4o-mini")
-API_KEY      = os.getenv("OPENAI_API_KEY", "dummy-key")
+API_KEY      = os.getenv("OPENAI_API_KEY")
+HF_TOKEN     = os.getenv("HF_TOKEN")
 ENV_URL      = os.getenv("ENV_URL", "https://shomi2209-code-review-env.hf.space")
 
 TASK_NAME               = "easy"
