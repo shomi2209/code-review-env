@@ -20,6 +20,14 @@ OpenEnv environment for AI agent code review training.
 - **medium** 5 bugs, multi-file
 - **hard**: 5 concurrency bugs
 
+## 🌐 Live Endpoints
+| Endpoint | Description |
+|----------|-------------|
+| [/web](https://shomi2209-code-review-env.hf.space/web) | Interactive Web UI |
+| [/docs](https://shomi2209-code-review-env.hf.space/docs) | Swagger API Docs |
+| [/health](https://shomi2209-code-review-env.hf.space/health) | Health Check |
+
+
 ## Quick Start
 
 The simplest way to use the Code Review Env environment is through the `CodeReviewEnv` class:
