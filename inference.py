@@ -8,7 +8,7 @@ from openai import OpenAI
 
 API_BASE_URL                   = os.getenv("API_BASE_URL", "https://api.openai.com/v1")
 MODEL_NAME                     = os.getenv("MODEL_NAME", "gpt-4o-mini")
-API_KEY                        = os.getenv("OPEN_API_KEY")
+API_KEY                        = os.getenv("OPENAI_API_KEY")
 
 TASK_NAME                      = "easy"
 BENCHMARK                      = "code_review_env"
@@ -17,16 +17,16 @@ MAX_TOTAL_REWARD               = 1.0
 SUCCESS_SCORE_THRESHOLD        = 0.7
 
 def log_start(task: str, env: str, model: str):
-    print(f"[START] task={task} env={env} model={model}, flush=True")
+    print(f"[START] task={task} env={env} model={model}", flush=True)
 
 def log_step(step: int, action: str, reward: float, done: bool, error=None):
-    print(f"[STEP] step={step} reward={reward: .4f} done={done}. flush=True")
+    print(f"[STEP] step={step} reward={reward: .4f} done={done}", flush=True)
     if error:
         print(f"[STEP] error={error}", flush=True)
 
 def  log_end(success: bool, steps: int, score: float, rewards: List[float]):
     total_reward = sum(rewards)
-    print(f"[END] success steps={steps} score={score:.4f} total_reward={total_reward:.4f}", flush=True)
+    print(f"[END] success={success} steps={steps} score={score:.4f} total_reward={total_reward:.4f}", flush=True)
 
 def get_model_response(client: OpenAI, code: str) -> list:
     try:
