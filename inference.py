@@ -71,7 +71,6 @@ def get_model_response(client: OpenAI, code: str) -> list:
             temperature=0.0,
         )
         raw = response.choices[0].message.content
-        # strip markdown code fences if present
         if "```" in raw:
             raw = raw.split("```")[1]
             if raw.startswith("json"):
@@ -94,7 +93,6 @@ async def main() -> None:
     log_start(task=TASK_NAME, env=BENCHMARK, model=MODEL_NAME)
 
     try:
-        # Reset environment
         observation = env_reset(TASK_NAME)
         code = observation.get("code", "")
         done = observation.get("done", False)
@@ -103,10 +101,7 @@ async def main() -> None:
             if done or not code:
                 break
 
-            # Get LLM response
             comments = get_model_response(client, code)
-
-            # Step environment
             result = env_step(comments)
             reward = result.get("reward", 0.0)
             done = result.get("done", False)
