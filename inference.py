@@ -137,4 +137,9 @@ async def main() -> None:
         log_end(success=success, steps=steps_taken, score=score, rewards=rewards)
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    try:
+        asyncio.run(main())
+    except Exception as e:
+        print(f"[DEBUG] Fatal error: {e}", flush=True)
+        import sys
+        sys.exit(0)
